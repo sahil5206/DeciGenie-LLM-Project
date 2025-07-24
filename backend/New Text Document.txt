@@ -1,0 +1,8 @@
+from semantic_search import search
+clauses = search(query, top_k=5)
+
+from query_parser import parse_query
+parsed = parse_query(user_query)
+
+from llm_reasoner import get_decision
+decision_json = get_decision(query, parsed, retrieved_clauses)

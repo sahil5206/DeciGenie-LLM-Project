@@ -4,7 +4,9 @@ import os
 import openai
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv()# Debug print to check the API key value
+print("OpenAI Key:", repr(os.getenv("OPENAI_API_KEY")))
+
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def build_prompt(query: str, parsed: dict, clauses: list):

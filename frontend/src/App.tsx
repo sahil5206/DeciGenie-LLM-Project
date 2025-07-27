@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import axios from "axios";
 // @ts-ignore
 import { motion, AnimatePresence } from "framer-motion";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomOneLight, atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/prism";
+import atomOneLight from "react-syntax-highlighter/dist/esm/styles/prism/one-light";
+import atomOneDark from "react-syntax-highlighter/dist/esm/styles/prism/one-dark";
 import "./App.css";
 
 

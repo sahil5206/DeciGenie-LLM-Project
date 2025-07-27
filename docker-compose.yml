@@ -15,6 +15,7 @@ services:
     container_name: backend
     environment:
       - MONGO_URI=mongodb://database:27017
+      - OPENAI_API_KEY=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
     depends_on:
       - database
     ports:
@@ -25,7 +26,7 @@ services:
       context: ./frontend
     container_name: frontend
     ports:
-      - "80:80"
+      - "3001:80"
     depends_on:
       - backend
     restart: unless-stopped
